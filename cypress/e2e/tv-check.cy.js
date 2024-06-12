@@ -1,8 +1,17 @@
-const {Browser} = require('../framework/browser');
+const browser = require('../framework/browser');
+const mainPage = require('../page-objects/pages/main-page');
 
-describe('Tv check', () => {
-    const browser = new Browser();
-    it('should navigate to main page', () => {
-        browser.navigateToMainPage();
+describe('Nav Menus', () => {
+    context('1080p resolution', () => {
+        beforeEach(() => {
+            cy.viewport(1920, 1080);
+        });
+
+
+        it('should filter tv', () => {
+            browser.navigateToMainPage();
+            mainPage.navigateMainMenu('Каталог');
+        });
+
     });
-})
+});

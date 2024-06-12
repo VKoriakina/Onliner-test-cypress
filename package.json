@@ -2,6 +2,10 @@
   "name": "cypress_project",
   "version": "1.0.0",
   "devDependencies": {
-    "cypress": "^13.11.0"
+    "cypress": "^13.11.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3"
   }
 }
