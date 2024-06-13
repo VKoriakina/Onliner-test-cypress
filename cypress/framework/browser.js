@@ -1,9 +1,10 @@
 
 class Browser {
 
-    async navigateToMainPage(){
-        cy.log('Open cite');
-        cy.visit('/')
+    setViewportAndNavigate(width, height, url = '/') {
+        cy.viewport(width, height);
+        cy.log('Open site');
+        cy.visit(url);
     }
 }
 
