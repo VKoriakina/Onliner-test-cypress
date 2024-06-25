@@ -4,7 +4,7 @@ const cataloguePage=require('../page-objects/pages/catalogue-page');
 const tvPage =require('../page-objects/pages/tv-page')
 
 
-describe('framework and test-data setup', () => {
+describe('Set framework', () => {
     beforeEach(() => {
         browser.setViewportAndNavigate(1920, 1080);
     });
@@ -20,10 +20,10 @@ describe('framework and test-data setup', () => {
             tvPage.selectDiagonalMin(tvData.diagonalMin);
             tvPage.selectDiagonalMax(tvData.diagonalMax);
             tvPage.selectPrice(tvData.price);
-            cy.pause();
-
-
+            tvPage.checkTitles(tvData);
+            tvPage.checkPrice(tvData);
+            tvPage.checkResolution(tvData);
+            tvPage.checkDiagonal(tvData)
             });
-
         });
 });
